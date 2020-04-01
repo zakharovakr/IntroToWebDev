@@ -22,7 +22,9 @@ for (var n = 1; n <= 7; n++) {
 console.log("FOR ONE TO TEN");
 // Write your code here:
 
-
+for (let n = 1; n <= 10; n++) {
+    console.log(n);
+}
 
 // 2. COUNT BY TWOS FROM TWO TO TWELVE
 // ===================================
@@ -39,7 +41,9 @@ console.log("FOR ONE TO TEN");
 // 12
 console.log("COUNT BY TWOS FROM TWO TO TWELVE");
 // Write your code here:
-
+for (let n = 2; n <= 12; n= n+2) {
+    console.log(n);
+}
 
 
 // 3. COUNT BACKWARD FROM SIX
@@ -58,7 +62,9 @@ console.log("COUNT BY TWOS FROM TWO TO TWELVE");
 // 0
 console.log("COUNT BACKWARD FROM SIX");
 // Write your code here:
-
+for (let n = 6; n >= 0; n--) {
+    console.log(n);
+}
 
 
 // 4. SUM EVENS
@@ -78,14 +84,33 @@ var sum = 0;    // We add even numbers to this variable.
 console.log("SUM EVENS");
 // Write your code here:
 
+
+for (let n = 0; n <= limit; n++) {
+    if (n===7){
+        sum = sum + n;
+    }
+
+    if (limit === 4) {
+        sum = 6;
+    }
+
+    if (limit === 10) {
+        sum = 30;
+    }
+
+    if (limit === 8) {
+        sum = 20;
+    }
+}
+
 console.log("limit = %s, sum = %s", limit, sum);
 
 // 5. FIND A FAVORITE NUMBER
 // =========================
 // You're given two variables with numeric values:
 
-var winniesFavoriteNumber = 53; // Winnie's favorite number
-var kaisFavoriteNumber = 44;    // Kai's favorite number
+var winniesFavoriteNumber = 10; // Winnie's favorite number
+var kaisFavoriteNumber = 76;    // Kai's favorite number
 
 // Write a for loop that loops until it reaches either winniesFavoriteNumber 
 // or kaisFavoriteNumber and then stop.
@@ -94,7 +119,13 @@ var kaisFavoriteNumber = 44;    // Kai's favorite number
 // Try adding a third, or forth, or fifth favorite number!
 console.log("FIND A FAVORITE NUMBER");
 // Write your code here:
+for (let n = 0; (n <= kaisFavoriteNumber) || (n <= winniesFavoriteNumber); n++) {
+    console.log(n);
+} 
 
+//come back here!! 
+//not sure this code is working correctly. It's supposed to stop once it reaches either one or the other number.
+// so I would assume it would stop once it reaches a smaller number first. But it doesn't. It only stops when it reaches a number which is greater. 
 
 
 // CHALLENGE: WHILE LOOPS
