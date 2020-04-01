@@ -7,8 +7,8 @@
 
 // You are given four variables with numeric values.
 
-var kidsWhoWantToSwim = 25;   // number of kids who want to swim
-var kidsWhoWantDoArchery = 5; // number of kids who want to do archery
+var kidsWhoWantToSwim = -1;   // number of kids who want to swim
+var kidsWhoWantDoArchery = 6; // number of kids who want to do archery
 var totalSwimmers = 0;        // number of kids who are actually swimming in the afternoon
 var totalArchers = 0;         // number of kids who are actually doing archery in the afternoon
 
@@ -28,6 +28,15 @@ var totalArchers = 0;         // number of kids who are actually doing archery i
 // ------------------------
 
 // Write your code here:
+if ((kidsWhoWantToSwim < 0) || (kidsWhoWantDoArchery < 0)) {
+    totalSwimmers = 0;     
+    totalArchers = 0;
+} else if (kidsWhoWantToSwim % 2 === 0) {
+    totalSwimmers = kidsWhoWantToSwim;
+    totalArchers = kidsWhoWantDoArchery;
+} else {
+    totalArchers = kidsWhoWantToSwim + kidsWhoWantDoArchery;
+}
 
 
 
