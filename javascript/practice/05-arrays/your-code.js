@@ -36,8 +36,12 @@ console.log("[-1] -> expected: -1, actual: %s", actual);
 // The function should NOT alter either parameter.
 // Write your code here:
 
-//stll working here.
 
+function combine(array1, array2) {
+    var arrayCombined = [];
+    arrayCombined = array1.concat(array2);
+    return arrayCombined.toString();
+}
 
 
 // Uncomment the code below to verify your function is working.
@@ -59,16 +63,28 @@ console.log("expected: Saturn,Black Lab,Borzoi,Pug\nactual: %s", merged);
 // The function should NOT alter either parameter.
 // Write your code here:
 
+function subtractArray(array1, array2) {
+    var array3 = array1;
+    for (var i = 0; i < array2.length; i++){
+        var index = array3.indexOf(array2[i]);
+        while (array2[i] >= 0) {
+            array3.splice(index, 1);
+            array2[i] = array3.indexOf(array2[i]);
+        }
+    }
+    return array3.toString();
+}
+
 
 
 // Uncomment the code below to verify your function is working.
-// console.log("subtractArray =====");
-// var result = subtractArray([1, 2, 3, 4, 5], [2, 4, 6]);
-// console.log("expected: 1,3,5\nactual: %s", result);
-// result = subtractArray(["Neptune", "Uranus", "Saturn", "Pluto"], ["Pluto"]);
-// console.log("expected: Neptune,Uranus,Saturn\nactual: %s", result);
-// result = subtractArray([1, 2, 3, 1, 2, 3, 1, 2, 3], [1, 3]);
-// console.log("expected: 2,2,2\nactual: %s", result);
+console.log("subtractArray =====");
+var result = subtractArray([1, 2, 3, 4, 5], [2, 4, 6]);
+console.log("expected: 1,3,5\nactual: %s", result);
+result = subtractArray(["Neptune", "Uranus", "Saturn", "Pluto"], ["Pluto"]);
+console.log("expected: Neptune,Uranus,Saturn\nactual: %s", result);
+result = subtractArray([1, 2, 3, 1, 2, 3, 1, 2, 3], [1, 3]);
+console.log("expected: 2,2,2\nactual: %s", result);
 
 
 
